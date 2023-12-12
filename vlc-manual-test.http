@@ -1,0 +1,28 @@
+
+# Requreis REST Client plugin for vs-code (humao.rest-client) and HTTP file association
+#  To send: ctrl+alt+r
+#       or: F1->Rest Client: Send Requst 
+
+@address = localhost:8080
+@authorization = basic :123
+
+### Get status as json
+GET http://{{address}}/requests/status.json
+authorization: {{authorization}}
+
+### Get status as xml
+GET http://{{address}}/requests/status.xml
+authorization: {{authorization}}
+
+### Send next
+GET http://{{address}}/requests/status.json?command=pl_next
+authorization: {{authorization}}
+
+### Send seek
+GET http://{{address}}/requests/status.xml?command=seek&val=5
+authorization: {{authorization}}
+
+### Send fullscreen
+GET http://{{address}}/requests/status.xml?command=fullscreen
+authorization: {{authorization}}
+
